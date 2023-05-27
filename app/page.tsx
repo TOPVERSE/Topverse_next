@@ -2,11 +2,19 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
+import bg from "public/imgs/Project/Metaverse-Build/MusicVenue.jpg"
+import Image from "next/image"
 
 export default function IndexPage() {
   return (
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
+    <section className="relative items-center" >
+      <Image src={bg} className=" absolute top-0 -z-10 h-screen w-screen blur " alt="bg" style={{
+        '-webkit-mask-image':'radial-gradient(circle farthest-side at top left,transparent 30%,black 150%)',
+        objectFit:"cover"
+      }}/>
+      <div className="container grid gap-6  pb-8 pt-32">
+
+      <div className="flex max-w-[980px] flex-col items-start gap-2 ">
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
           Beautifully designed components <br className="hidden sm:inline" />
           built with Radix UI and Tailwind CSS.
@@ -33,6 +41,7 @@ export default function IndexPage() {
         >
           GitHub
         </Link>
+      </div>
       </div>
     </section>
   )
