@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
 import bg from "public/imgs/Project/Metaverse-Build/MusicVenue.jpg"
 import Image from "next/image"
+import Velocity from "./Velocity"
 
 export default function IndexPage() {
   return (
@@ -43,6 +44,8 @@ export default function IndexPage() {
         </Link>
       </div>
       </div>
+
+      <Velocity/>
     </section>
   )
 }
